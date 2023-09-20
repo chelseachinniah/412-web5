@@ -1,0 +1,139 @@
+/* gets rid of the white border surrounding the web page */
+/* download the code from google fonts by clicking "CSS rules to specify families" */
+body { 
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* adds spacing between the content and the side of the page */
+/* The star means that you're going one level in*/
+body > * {
+    padding: 2rem;
+}
+
+/* by using max-width, we're limiting the number of characters per line, you try numbers until there are about 55-65 charcters per line */
+p{
+    max-width: 30rem;
+}
+
+img{
+    max-width: 320px;
+}
+
+/* a{
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: rgb(100, 100, 100);
+    color: aquamarine;
+    border-radius: 1rem;
+} */
+
+header{
+    display: grid;
+    justify-items: center;
+}
+
+header nav ul{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    align-items: center; /*"align-items" is aligning items on the horizontal axis*/
+    justify-items: center; /*"justify-items" is aligning items on the horizontal axiz*/
+
+    /* grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); makes the links side by side with 10rem in between*/
+}
+
+header nav ul li a{
+    display: block;
+    padding: 1rem 10rem;
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    background-color: rgb(100, 100, 100);
+    color: aquamarine;
+    border-radius: 1rem;
+}
+
+main{
+    background-color: aquamarine;
+}
+
+main h2{
+    margin-top: 2.5rem;
+}
+
+/* padding takes the parameters in this order (I think): top, right, bottom, left. unless you only add 2 values, then the first will be applied to both the top and bottom and the second will be applied to both the left and right*/
+main img{
+    padding: 1rem 0;
+    border-radius: 3rem;
+
+    /* border-radius: 50%; you can do this to make your image a circle*/ 
+}
+
+/* adding padding "0" makes it so that the text isn't tabbed even though the bullet point is gone*/
+main ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* without the display parameter, the white background would take up the entire line of the list item instead of keeping it confined to the width of the list item. Display inline-block makes your skills look like little tags*/
+main ul li{
+    display: inline-block;
+    padding: 0.2rem;
+    background-color: white;
+    margin: 0.2rem;
+    border-radius: 0.5rem;
+    /* max-width: 8rem; */
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* adding spacing in between lines*/
+footer ul li{
+    margin: 0.2rem 0;
+}
+
+footer ul li a{
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    body > * {
+        padding: 2rem 20vw;
+    }
+
+    header{
+        grid-template-columns: auto 1fr;
+    }
+
+    header nav ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header nav ul li a{
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    body > * {
+        padding: 2rem 25vw;
+    }
+
+    header nav ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header nav ul li a{
+        padding: 1rem 3rem;
+    }
+}
+
